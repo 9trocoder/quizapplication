@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9trocoder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header>
+        <h1>9trocoder <span class="highlight">Quiz</span></h1>
+        <div class="quiz-info hidden" id="quiz-info">
+          <div class="timer-board">
+            Time Left: <span id="timer-text">5</span>s
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="score-board">
+            Question: <span id="question-number">1</span>/50
+          </div>
+        </div>
+      </header>
+
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen active">
+        <h2>Test Your JavaScript Knowledge</h2>
+        <p>50 Questions. 5s per question. Pure Logic.</p>
+        <button id="start-btn" class="btn primary">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="screen hidden">
+        <div class="question-card">
+          <h3 id="question-text">Question goes here?</h3>
+          <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        <div class="controls">
+          <button id="quit-btn" class="btn danger">End Quiz</button>
+          <button id="next-btn" class="btn secondary hidden">
+            Next Question
+          </button>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="screen hidden">
+        <h2>Quiz Completed!</h2>
+        <div class="score-display">
+          You scored <span id="final-score">0</span> out of 50
+        </div>
+        <p id="feedback-message">Keep practicing!</p>
+        <button id="restart-btn" class="btn primary">Restart Quiz</button>
+        <button id="review-btn" class="btn secondary">Review Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
